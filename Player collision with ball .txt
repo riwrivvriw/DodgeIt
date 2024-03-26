@@ -1,0 +1,8 @@
+if (ballX + 20 >= playerX && ballX <= playerX + playerImage.getWidth() && ballY + 20 >= playerY && ballY <= playerY + playerImage.getHeight()) {
+                    play = false; // Game over
+                    timer.stop(); // Stop the timer
+                    JOptionPane.showMessageDialog(this, "Game Over! Your score: " + score, "Game Over", JOptionPane.INFORMATION_MESSAGE);
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)); // Close the window
+                }
+
+            repaint();
